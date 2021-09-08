@@ -1,0 +1,46 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "settings": {
+        "react": {
+            "version": ""
+        }
+    },
+    "rules": {
+        "react/no-unescaped-entities": [
+            "error",
+            {
+                "forbid": [
+                    {
+                        "char": ">",
+                        "alternatives": ["&gt;"]
+                    },
+                    {
+                        "char": "}",
+                        "alternatives": ["&#125;"]
+                    }
+                ]
+            }
+        ]
+    }
+}

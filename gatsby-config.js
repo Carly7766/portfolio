@@ -5,6 +5,15 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
-}
+    /* Your site config here */
+    plugins: [
+        {
+            resolve: `gatsby-plugin-typescript`,
+            options: {
+                isTSX: true,
+                jsxPragma: `jsx`,
+                allExtensions: true,
+            },
+        },
+    ],
+};
