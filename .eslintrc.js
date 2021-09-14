@@ -1,35 +1,31 @@
 module.exports = {
-    root: true,
     env: {
         browser: true,
-        es2020: true,
+        es2021: true,
         node: true,
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
         project: './tsconfig.json',
-        ecmaVersion: 2020,
-        sourceType: 'module',
         ecmaFeatures: {
             jsx: true,
         },
+        ecmaVersion: 12,
+        sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:react/recommended',
-        'prettier',
-    ],
     settings: {
         react: {
             version: 'detect',
         },
     },
+    plugins: ['react', '@typescript-eslint'],
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'prettier',
+    ],
     rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn',
         'react/no-unescaped-entities': [
             'error',
             {

@@ -4,18 +4,35 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const path = require('path');
+const gatsbyRequiredRules = path.join(
+    process.cwd(),
+    'node_modules',
+    'gatsby',
+    'dist',
+    'utils',
+    'eslint-rules'
+);
+
 module.exports = {
     /* Your site config here */
+    flags: {
+        PARALLEL_SOURCING: false,
+        LMDB_STORE: false,
+    },
     plugins: [
         {
-            resolve: 'gatsby-plugin-eslint-v2',
+            resolve: 'gatsby-plugin-eslint',
             options: {
-                test: /\.js$|\.jsx$/,
-                exclude: /(node_modules|cache|public)/,
-                options: {
-                    emitWarning: true,
-                    failOnError: false,
-                },
+                rulePaths: [gatsbyRequiredRules],
+                stages: ['develop'],
+                extensions: ['js', 'jsx', 'ts', 'tsx'],
+                exclude: [
+                    'node_modules',
+                    'bower_components',
+                    '.cache',
+                    'public',
+                ],
             },
         },
         {

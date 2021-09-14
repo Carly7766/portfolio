@@ -3,7 +3,7 @@
         "module": "commonjs",
         "target": "ES2020",
         "jsx": "preserve",
-        "lib": ["DOM", "ES2020"],
+        "lib": ["DOM", "ES2021"],
         "strict": true,
         "noEmit": true,
         "isolatedModules": true,
