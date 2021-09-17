@@ -4,9 +4,6 @@ type LayoutProps = {
     heading: string;
 };
 class Layout extends React.Component<LayoutProps> {
-    constructor(props: LayoutProps) {
-        super(props);
-    }
     public render(): React.ReactNode {
         return (
             <>
