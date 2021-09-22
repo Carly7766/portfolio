@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-type LayoutProps = {
+type PageLayoutProps = {
     heading: string;
 };
-class Layout extends React.Component<LayoutProps> {
+class PageLayout extends React.Component<PageLayoutProps> {
     public render(): React.ReactNode {
         return (
             <>
@@ -16,4 +16,4 @@ class Layout extends React.Component<LayoutProps> {
     }
 }
 
-export default Layout;
+export default PageLayout;

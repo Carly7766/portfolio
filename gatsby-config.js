@@ -5,6 +5,10 @@
  */
 module.exports = {
     /* Your site config here */
+    siteMetadata: {
+        title: 'Carly',
+        description: 'My portfolio',
+    },
     flags: {
         PARALLEL_SOURCING: false,
         LMDB_STORE: false,
